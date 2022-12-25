@@ -5,7 +5,8 @@ Reload the page when a Capybara selector fails. After reload assert the selector
 When used for a randomly failing spec it will store and show the states before every load.
 
 ```ruby
-expect(page).to have_xpath "//..the xpath value", allow_max_reloads: Capybara::Reloads.recommended_allow_max_reloads
+expect(page).to have_xpath("//..the xpath value", 
+    allow_max_reloads: Capybara::Reloads.recommended_allow_max_reloads)
 ```
 
 If the selector is first not matched and matched after reload capybara-reloads will report it as:
@@ -136,7 +137,8 @@ expect(page).to have_xpath "//..the xpath value", allow_max_reloads: 2
 or the recommended
 
 ```ruby
-expect(page).to have_xpath "//..the xpath value", allow_max_reloads: Capybara::Reloads.recommended_allow_max_reloads
+expect(page).to have_xpath("//..the xpath value", 
+    allow_max_reloads: Capybara::Reloads.recommended_allow_max_reloads)
 ```
 
 ### Stop at a breakpoint only when reload 'fixed it'
