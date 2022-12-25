@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [0.1.2] - 2022-12-25
+
+- Changing homepage and changelog uri for rubygems.org
+
 ## [0.1.1] - 2022-12-25
 
 - Dummy version with a change to image to make sure rubygems is correctly setup
