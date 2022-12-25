@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name = "capybara-reloads"
   spec.version = Capybara::Reloads::VERSION
   spec.authors = ["Kiril Mitov"]
-  spec.email = ["kiril [at] retreaver [dot] com"]
+  spec.email = ["kiril+rubygems [ at ] retreaver [with the dot] com"]
 
   spec.summary = "Utilities for Capybara to allow us to reload the page and check if examples will then pass."
   spec.homepage = "https://kmitov.com"
