@@ -33,7 +33,7 @@ module Capybara
                 raise e
               end
               reloads_made+=1
-              args = {base: self, exception: e}
+              args = { base: self, exception: e }
               # Allows us to change the way we report that a refresh should happend
               if Capybara::Reloads.before_reload_callback != nil
                 Capybara::Reloads.before_reload_callback.call(args)
@@ -61,7 +61,16 @@ module Capybara
           html_and_image = Capybara::Screenshot.screenshot_and_save_page
           # html_and_image is of the form
           # {:html=>"...screenshot_2022-12-25-17-42-37.712.html", :image=>"...screenshot_2022-12-25-17-42-37.712.png"}
-          @previous_states << html_and_image.merge({exception: exception, reloads_made: reloads_made})
+          exception_hash = exception ?
+            {
+              instance: exception,
+              backtrace: exception.backtrace
+            } : nil
+
+          @previous_states << html_and_image.merge({
+            exception: exception_hash,
+            reloads_made: reloads_made
+          })
         end
 
       end

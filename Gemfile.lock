@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    capybara-reloads (0.1.2)
+    capybara-reloads (0.2.0)
       capybara (~> 3.0)
       capybara-screenshot (~> 1.0)
 
